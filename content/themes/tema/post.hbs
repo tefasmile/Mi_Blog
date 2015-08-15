@@ -20,9 +20,10 @@
             <h1 id="page-title">{{title}}</h1>            
             <h2 id="post-date">{{date format="DD MMMM YYYY"}}</h2>
         </div>     
-        <nav id="social-nav">
+        <nav id="social-nav">Sigueme
             <a class="social-link"><i class="fa fa-facebook"></i></a>
-            <a class="social-link" href="{{@blog.url}}/rss/"><i class="fa fa-hateyou-r"></i></a>
+            <a class="social-link"><i class="fa fa-twitter"></i></a>
+            <a class="social-link" href="{{@blog.url}}/rss/"><i class="fa fa-github"></i></a>
         </nav>
     </div>
 </header>
@@ -38,15 +39,15 @@
         <section class="share">
             <a class="twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                <i class="fa fa-hateyou-t"></i>
+                <i class="fa fa-twitter"></i>
             </a>
             <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                <i class="fa fa-hateyou-f"></i>
+                <i class="fa fa-facebook"></i>
             </a>
             <a class="google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                <i class="fa fa-hateyou-gp"></i>
+                <i class="fa fa-google-plus"></i>
             </a>
         </section>
     </article>

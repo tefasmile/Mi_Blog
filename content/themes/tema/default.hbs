@@ -8,7 +8,6 @@
     {{! Page Meta }}
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}" />
-
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -18,16 +17,19 @@
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.css">
+    {{! SVG }}
+    <script src="{{asset "js/snap.svg.js"}}"></script>
+    <script src="{{asset "js/snap.svg-min.js"}}"></script>
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,700,700italic,300italic|Open+Sans:700,400" />
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-
     {{! Everything else gets inserted here }}
+    
     {{{body}}}
-
+    
     <footer id="main-footer">
         <div id="main-footer-content" class="bounding">
             <span>All content copyright <span id="blog-copy"><a href="{{@blog.url}}">{{@blog.title}}</a></span> &copy; {{date format="YYYY"}}</span>
@@ -50,6 +52,13 @@
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-XXXXX-X');ga('send','pageview');
     </script-->
+
+    {{!archivos js}}
+    <script src="{{asset "js/classie.js"}}"></script>
+    <script src="{{asset "js/main.js"}}"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 
 </body>
 </html>

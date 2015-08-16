@@ -266,7 +266,7 @@ body {
 }
 
 a {
-  color: #832f0c;
+  color: #63808C;
   font-weight: bold;
   text-decoration: none;
   transition: .2s ease-in-out;
@@ -431,7 +431,7 @@ body {
 
 .menu-wrap a:hover,
 .menu-wrap a:focus {
-  color: #A7B4ED;
+  color: #18E884;
 }
 
 .content-wrap {
@@ -469,10 +469,10 @@ body {
   color: red;
   font-size: 1.5em;
   height: 2.25em;
-  margin: 1em;
+  margin: .5em;
   padding: 0;
-  position: fixed;
-  right: 1.5em;
+  position: absolute;
+  right: .2em;
   text-indent: 2.5em;
   width: 2.5em;
   z-index: 1000;

@@ -603,6 +603,16 @@ body {
 }
 /*****fin menu navegacion elastic*****/
 
+.avatar
+{
+  text-align: center;
+}
+
+figure
+{
+  margin: 0;
+}
+
 header#main-header {
   position: relative;
   background-color: #0EC06A;
@@ -613,9 +623,24 @@ header#main-header {
   background-repeat: no-repeat;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
 }
+@media (max-width: 40em){
+  .image img
+  {
+    display: none;
+  }
+}
 @media (max-width: 50em) {
   header#main-header {
     height: 300px;
+  }
+
+  .image img
+  {
+    max-width: 128px;
+    border-radius: 50%;
+    top: .5em;
+    position: relative;
+    border: solid springgreen;
   }
 }
 @media (max-width: 68.75em) and (orientation: landscape) {
@@ -653,7 +678,7 @@ header#main-header #main-header-content {
 }
 @media (min-width: 30em) and (max-width: 50em) {
   header#main-header #main-header-content {
-    bottom: 15%;
+    bottom: 10%;
     padding-left: 2em;
   }
 }

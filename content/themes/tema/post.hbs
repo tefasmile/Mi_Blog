@@ -6,6 +6,8 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
+{{navigation}}
+
 {{#if image}}
 <header id="main-header" class="post-header shadowed-text" style="background-image: url({{image}})">
     <div id="main-header-shadow"></div>
@@ -13,6 +15,8 @@
 {{else}}
 
 <header id="main-header" class="post-header">
+{{! buttons like}}
+
 {{/if}}
 
     <div class="bounding">
@@ -20,16 +24,32 @@
             <h1 id="page-title">{{title}}</h1>            
             <h2 id="post-date">{{date format="DD MMMM YYYY"}}</h2>
         </div>     
-        <nav id="social-nav">Sigueme
-            <a class="social-link"><i class="fa fa-facebook"></i></a>
-            <a class="social-link"><i class="fa fa-twitter"></i></a>
-            <a class="social-link" href="{{@blog.url}}/rss/"><i class="fa fa-github"></i></a>
-        </nav>
     </div>
 </header>
 
 <div class="bounding">
     <article id="main-article">
+        
+        {{!button likes}}
+        <div class="redes-sociales">
+            <div class="face">
+                <div id="fb-root"></div>
+                <div class="fb-like" data-href="http://www.compartidisimo.com" data-width="320" data-layout="button_count" data-action="like" data-share="false"></div>
+            </div>
+            <div class="tw">
+                {{!twitter}}
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.compartidisimo.com/" data-via="tefalife">Tweet</a>
+            </div>
+            <div class="li">
+                <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                <script type="IN/Share" data-url="https://platzi.com/" data-counter="right"></script>
+            </div>
+            <div class="go">
+                {{!google}}
+                <div class="g-plusone" data-annotation="none"></div>
+            </div>
+        </div>
+        
         <div class="post-content">{{content}}</div>
 
         <section class="tags">
@@ -61,13 +81,12 @@
 
             <h4 id="author-name"><a href="{{url}}">{{name}}</a></h4>
 
-            <p id="author-bio">
-            {{#if bio}}
-                {{bio}}
-            {{else}}
-                Read <a href="{{url}}">more posts</a> by this author.
-            {{/if}}
-            </p>
+            <div id="author-bio">
+                <figure>
+                    <img class="imagen" src="{{asset "img/tefa.jpg"}}"/>
+                    <p class="leyend">GrowHacker en constante aprendizaje, feliz de compartir conocimiento.</p>
+                </figure>
+            </div>
 
             <div class="author-meta">
                 {{#if location}}

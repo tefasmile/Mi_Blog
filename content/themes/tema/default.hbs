@@ -29,7 +29,17 @@
     {{! Everything else gets inserted here }}
     
     {{{body}}}
-    
+    {{! Load Facebook SDK for JavaScript}}
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <footer id="main-footer">
         <div id="main-footer-content" class="bounding">
             <span><a href="{{@blog.url}}">{{@blog.title}}</a>Todos los derechos reservados<span id="blog-copy"></span> &copy; {{date format="YYYY"}}</span>

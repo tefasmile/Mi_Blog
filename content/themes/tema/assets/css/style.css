@@ -431,7 +431,7 @@ body {
 
 .menu-wrap a:hover,
 .menu-wrap a:focus {
-  color: #18E884;
+  color: #7986CB;
 }
 
 .content-wrap {
@@ -623,7 +623,7 @@ header#main-header {
   background-repeat: no-repeat;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
 }
-@media (max-width: 40em){
+@media (max-width: 35em){
   .image img
   {
     display: none;
@@ -640,12 +640,21 @@ header#main-header {
     border-radius: 50%;
     top: .5em;
     position: relative;
-    border: solid springgreen;
+    border: solid bisque;
   }
 }
 @media (max-width: 68.75em) and (orientation: landscape) {
   header#main-header:not(&.post-header) {
     height: 150px;
+  }
+
+  .image img
+  {
+    max-width: 128px;
+    border-radius: 50%;
+    top: 1.5em;
+    position: relative;
+    border: solid bisque;
   }
 }
 @media (max-width: 30em) {
@@ -653,6 +662,18 @@ header#main-header {
     height: 200px;
   }
 }
+
+@media (max-width: 120em) {
+  .image img
+  {
+    max-width: 128px;
+    border-radius: 50%;
+    top: .5em;
+    position: relative;
+    border: solid #F0E9E1;
+  }
+}
+
 header#main-header .bounding {
   position: absolute;
   bottom: 0;
@@ -674,11 +695,11 @@ header#main-header #main-header-content {
   position: absolute;
   text-align: left;
   color: white;
-  bottom: 3em;
+  bottom: 6em;
 }
 @media (min-width: 30em) and (max-width: 50em) {
   header#main-header #main-header-content {
-    bottom: 10%;
+    bottom: 12%;
     padding-left: 2em;
   }
 }
